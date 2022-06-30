@@ -8,7 +8,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Yo zeubi</h1>
-    {{ name }}
+{#    <h1>Yo zeubi</h1>#}
+    {% if category.published %}
+{#    On utilise une {{  }} pour utiliser le twig#}
+    <article style ="background-color:{{ category.color }}">
+    <h2>{{ category.title }}</h2>
+    <p>{{ category.description }}</p>
+    </article>
+    {% endif %}
 </body>
 </html>
