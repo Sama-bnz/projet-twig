@@ -9,12 +9,13 @@
 </head>
 <body>
 {#    <h1>Yo zeubi</h1>#}
-    {% if stars.published %}
+{% if stars.published %}
 {#    On utilise une {{  }} pour utiliser le twig#}
 {#    On utlise la couleur de l'article en background    #}
     <article style ="background-color:{{ stars.color }}">
     <h2>{{ stars.title }}</h2>
     <img src="{{ stars.image }}" alt="image">
+    <p>Article datant de : {{ stars.publishedDate|date("d/m/Y") }}</p>
     </article>
 {#    Fin de la condition    #}
     {% endif %}
