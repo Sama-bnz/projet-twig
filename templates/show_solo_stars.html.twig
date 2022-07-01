@@ -1,23 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-{#    <h1>Yo zeubi</h1>#}
-{% if stars.published %}
-{#    On utilise une {{  }} pour utiliser le twig#}
-{#    On utlise la couleur de l'article en background    #}
-    <article style ="background-color:{{ stars.color }}">
-    <h2>{{ stars.title }}</h2>
-    <img src="{{ stars.image }}" alt="image">
-    <p>Article datant de : {{ stars.publishedDate|date("d/m/Y") }}</p>
-    </article>
-{#    Fin de la condition    #}
-    {% endif %}
-</body>
-</html>
+{% include '_header.html.twig' %}
+
+{% include '_article.html.twig' %}
+
+{% include '_footer.html.twig' %}
