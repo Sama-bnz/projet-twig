@@ -9,12 +9,12 @@
 </head>
 <body>
 {#    <h1>Yo zeubi</h1>#}
-    {% if category.published %}
+    {% if stars.published %}
 {#    On utilise une {{  }} pour utiliser le twig#}
 {#    On utlise la couleur de l'article en background    #}
-    <article style ="background-color:{{ category.color }}">
-    <h2>{{ category.title }}</h2>
-    <p>{{ category.description }}</p>
+    <article style ="background-color:{{ stars.color }}">
+    <h2>{{ stars.title }}</h2>
+    <img src="{{ stars.image }}" alt="image">
     </article>
 {#    Fin de la condition    #}
     {% endif %}
