@@ -10,18 +10,11 @@ use Symfony\Component\Routing\Annotation\Route;
 class AcceuilController extends AbstractController
 {
     /**
-     * @Route ("/bonjour", name="bonjour")
+     * @Route ("/", name="bonjour")
      */
     public function bonjour()
     {
         //Je crée ma variable name
-        $category =[
-            'title' =>'Politique',
-            'color' => 'red',
-            'published' => true,
-            'description'=> "Decrypter l'actualité politique avec le prisme de David Robert"
-        ];
-
 
 
 
@@ -29,7 +22,7 @@ class AcceuilController extends AbstractController
         // Je transforme en fichier html
         // et la retourne au navigateur
 
-        return $this->render('show_name.html.twig', ['category'=> $category]);
+        return $this->render('home.html.twig');
 
     }
 }

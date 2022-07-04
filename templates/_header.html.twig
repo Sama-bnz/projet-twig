@@ -6,9 +6,18 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Les stars</title>
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
 </head>
 <body>
 
 <header>
-    Je suis le header
+    <ul>
+        <li>
+            <a href="{{ path('bonjour') }}">Accueil</a>
+        </li>
+        <li>
+            <a href="{{ path('stars') }}">Liste des stars</a>
+        </li>
+
+    </ul>
 </header>
